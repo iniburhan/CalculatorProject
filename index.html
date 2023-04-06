@@ -3,47 +3,50 @@
 
 <head>
   <meta charset="utf-8">
-  <!--   <meta name="viewport" content="width=device-width"> -->
   <title>Calculator-iniburhan</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <div class="calculator">
-    <input type="text" class="calculator-screen" value="0" disabled>
+<div class="calculator">
+  <form action="" name="cal">
+    <input type="text" class="calculator-screen" name="field" placeholder="0" disabled>
+  </form>
     <div class="calculator-keys">
       <div class="row">
-        <button class="all-clear">AC</button>
-        <button class="percentage">%</button>
-        <button class="operator" value="/">&divide;</button>
+        <button  value="AC" onclick="ac()">AC</button>
+        <button  value="DEL" onclick="back()">DEL</button>
+        <button class="percentage" value="%" onclick="insert('%')">%</button>
+        <button class="operator" value=":" onclick="insert('/')">&divide;</button>
       </div>
       <div class="row">
-        <button class="number" value="7">7</button>
-        <button class="number" value="8">8</button>
-        <button class="number" value="9">9</button>
-        <button class="operator" value="*">&times;</button>
+        <button value="7" onclick="insert('7')">7</button>
+        <button value="8" onclick="insert('8')">8</button>
+        <button value="9" onclick="insert('9')">9</button>
+        <button class="operator" value="x" onclick="insert('*')">&times;</button>
       </div>
       <div class="row">
-        <button class="number" value="4">4</button>
-        <button class="number" value="5">5</button>
-        <button class="number" value="6">6</button>
-        <button class="operator" value="-">-</button>
+        <button value="4" onclick="insert('4')">4</button>
+        <button value="5" onclick="insert('5')">5</button>
+        <button value="6" onclick="insert('6')">6</button>
+        <button class="operator" value="-" onclick="insert('-')">-</button>
       </div>
       <div class="row">
-        <button class="number" value="1">1</button>
-        <button class="number" value="2">2</button>
-        <button class="number" value="3">3</button>
-        <button class="operator" value="+">+</button>
+        <button value="1" onclick="insert('1')">1</button>
+        <button value="2" onclick="insert('2')">2</button>
+        <button value="3" onclick="insert('3')">3</button>
+        <button class="operator" value="+" onclick="insert('+')">+</button>
       </div>
       <div class="row">
-        <button class="number zero-btn" value="0">0</button>
-        <button class="decimal" value=".">.</button>
-        <button class="equal-sign">=</button>
+        <button class="number zero-btn" value="0" onclick="insert('0')">0</button>
+        <button class="decimal" value="." onclick="insert('.')">.</button>
+        <button class="equal-sign" onclick="equal()">=</button>
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
-  <!--   <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script> -->
+
+  <!-- Script harus berada di bagian bawah -->
+<script src="script.js"></script>
 </body>
 
 </html>
